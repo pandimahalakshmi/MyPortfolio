@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="w-screen min-h-screen flex">
+    <div className="max-w-screen min-h-screen flex overflow-x-hidden">
       <Sidebar />
 
       <div className="h-full w-full">

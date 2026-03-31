@@ -1,13 +1,15 @@
 function About() {
   return (
     
-    <section id="about" className="w-full min-h-screen mr-20 p-20 bg-black text-white">
+    <section id="about" className="w-full min-h-screen p-20 bg-black text-white">
 
-      <h2 className=" flex gap-3 justify-center text-4xl font-bold mb-6">
-        ABOUT <h2 className="text-yellow-400 font-bold text-4xl">ME</h2>
-      </h2>
+      <div className="flex justify-center">
+        <h2 className="text-4xl font-bold border-b-2 border-yellow-400 pb-2 transition-all duration-500">
+          <span>ABOUT</span> <span className="text-yellow-400">ME</span>
+        </h2>
+      </div>
 
-     <h3 className="text-2xl text-yellow-400  font-bold pl-52 py-10">PERSONAL INFOS</h3>
+     <h3 className="text-2xl text-yellow-400  font-bold pl-52 py-10">PERSONAL INFO</h3>
      <div className="grid grid-cols-2 pl-52">
     <div className="flex flex-col  ">
      <div className="flex gap-3 pt-10">

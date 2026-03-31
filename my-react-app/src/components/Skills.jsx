@@ -3,13 +3,15 @@ import { SiTailwindcss } from "react-icons/si";
 
 function Skills() {
   return (
-    <section id="skills" className="w-full min-h-screen mr-20 bg-black text-white p-20">
+    <section id="skills" className="w-full min-h-screen bg-black text-white p-20">
 
-      <h2 className="text-center text-5xl font-bold mb-28">
-        My <span className="text-yellow-400">Skills</span>
-      </h2>
+      <div className="flex justify-center mb-28">
+        <h2 className="text-4xl font-bold border-b-2 border-yellow-400 pb-2 transition-all duration-500">
+          My <span className="text-yellow-400">Skills</span>
+        </h2>
+      </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-items-center">
+      <div className="grid grid-cols-2 md:grid-cols-5  justify-items-center">
 
         <div className="flex flex-col items-center group">
           <FaHtml5 className="text-8xl text-orange-500 transition duration-500 group-hover:scale-125 group-hover:rotate-12"/>
@@ -41,5 +43,4 @@ function Skills() {
     </section>
   );
 }
-
 export default Skills;

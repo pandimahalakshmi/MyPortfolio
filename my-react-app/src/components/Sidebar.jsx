@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="fixed right-0 top-0 h-screen w-24 bg-black flex flex-col items-center justify-center gap-10">
+    <div className="fixed right-0 top-0 h-screen w-24 bg-black flex flex-col items-center justify-center gap-10 z-50">
 
       <div className="relative group flex items-center">
         <Link to="/" className="text-white text-2xl p-3 rounded-full hover:bg-yellow-400 hover:text-black transition">
