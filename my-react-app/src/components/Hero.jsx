@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="h-screen flex items-center justify-center bg-gray-900 text-white">
 
@@ -38,14 +41,15 @@ function Hero() {
 
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="border-2 border-yellow-400 px-6 py-2 rounded-3xl"
+            className="border-2 hover:bg-yellow-400 hover:text-black border-yellow-400 px-6 py-2 rounded-3xl"
+            onClick={() => navigate("/contact")}
           >
             HIRE ME
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="border-2 border-yellow-400 px-6 py-2 rounded-3xl"
+            className="border-2 border-yellow-400 px-6 py-2 rounded-3xl  hover:bg-yellow-400 hover:text-black"
           >
             DOWNLOAD CV
           </motion.button>
