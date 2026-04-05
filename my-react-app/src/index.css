@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html, body, #root {
   overflow-x: hidden;
   max-width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #000;
+  color: #fff;
 }
 
 @keyframes spinSlow {

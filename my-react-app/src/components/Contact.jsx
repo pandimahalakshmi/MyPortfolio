@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function Contact() {
   return (
     <section id="contact" className="bg-gray-900 text-white w-full h-screen overflow-hidden flex items-center px-4">
@@ -6,9 +8,18 @@ function Contact() {
       <div className="max-w-2xl mx-auto" style={{ paddingRight: '96px' }}>
 
         <div className="mb-10 flex justify-center">
-          <h2 className="text-4xl font-bold border-b-2 border-yellow-400 pb-2">
-            Contact <span className="text-yellow-400">Me</span>
-          </h2>
+          <div className="text-center">
+            <h2 className="text-4xl font-bold inline-flex flex-wrap justify-center gap-2 pb-2">
+              <span>Contact</span>
+              <span className="text-yellow-400">Me</span>
+            </h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="h-[3px] bg-yellow-400 mt-2 origin-left"
+            />
+          </div>
         </div>
 
         <div className="bg-gray-800 p-8 rounded-xl shadow-lg">

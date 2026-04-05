@@ -1,14 +1,24 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import { motion } from "framer-motion";
 
 function Skills() {
   return (
     <section id="skills" className="w-full min-h-screen bg-black text-white p-20">
 
       <div className="flex justify-center mb-28">
-        <h2 className="text-4xl font-bold border-b-2 border-yellow-400 pb-2 transition-all duration-500">
-          My <span className="text-yellow-400">Skills</span>
-        </h2>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold inline-flex flex-wrap justify-center gap-2  pb-2">
+            <span>My</span>
+            <span className="text-yellow-400">Skills</span>
+          </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="h-[3px] bg-yellow-400 mt-2 origin-left mx-auto"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-5  justify-items-center">

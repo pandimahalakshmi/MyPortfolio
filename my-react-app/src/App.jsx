@@ -8,10 +8,10 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="max-w-screen min-h-screen flex overflow-x-hidden">
+    <div className="min-h-screen flex overflow-x-hidden bg-black">
       <Sidebar />
 
-      <div className="h-full w-full">
+      <div className="h-full w-full bg-black">
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />

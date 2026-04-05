@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function Projects() {
   const projects = [
     {
@@ -26,11 +28,19 @@ function Projects() {
       {/* Constrain content away from the 96px sidebar on the right */}
       <div className="max-w-screen-xl mx-auto pr-24">
 
-        {/* Section Title */}
-        <div className="flex justify-center mb-16 md:mb-20 animate-fadeIn">
-          <h2 className="text-3xl md:text-5xl lg:text-4xl font-bold text-center border-b-2 border-yellow-400 pb-2 transition-all duration-500 mb-8">
-            My  <span className="mb-5 py-5 text-yellow-400">Projects</span>
-          </h2>
+        <div className="flex justify-center mb-16 md:mb-20">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-center inline-flex flex-wrap justify-center gap-2 pb-2 mb-3">
+              <span>My</span>
+              <span className="text-yellow-400">Projects</span>
+            </h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="h-[3px] bg-yellow-400 mx-auto origin-left"
+            />
+          </div>
         </div>
 
         {/* Projects Grid */}
