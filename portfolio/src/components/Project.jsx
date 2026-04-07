@@ -23,50 +23,64 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="w-full min-h-screen bg-black text-white overflow-x-hidden py-20 px-4 md:px-8"
+      className="w-full min-h-screen bg-black text-white px-4 py-10 md:px-10 md:py-16 lg:px-20 lg:py-20"
     >
-      {/* Constrain content away from the 96px sidebar on the right */}
-      <div className="max-w-screen-xl mx-auto pr-24">
+      <div className="max-w-6xl mx-auto">
 
+        {/* Section Title */}
         <div className="flex justify-center mb-16 md:mb-20">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-center inline-flex flex-wrap justify-center gap-2 pb-2 mb-3">
+          <div className="inline-flex flex-col items-center">
+            <h2 className="text-2xl md:text-4xl font-bold inline-flex gap-2">
               <span>My</span>
               <span className="text-yellow-400">Projects</span>
             </h2>
+
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="h-[3px] bg-yellow-400 mx-auto "
+              transition={{ duration: 0.8 }}
+              className="h-[3px] bg-yellow-400 mt-2 w-full"
             />
           </div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 animate-fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+
           {projects.map((project) => (
+
             <div
               key={project.title}
-              className="bg-gray-900 rounded-xl p-6 md:p-8
-                         transition-all duration-300 ease-in-out
-                         hover:-translate-y-1 hover:shadow-xl hover:bg-gray-800
-                         will-change-transform"
+              className="flex flex-col justify-between
+              rounded-3xl border border-white/10 bg-white/5
+              p-6 md:p-8
+              shadow-xl shadow-black/40
+              hover:-translate-y-2 hover:bg-white/10
+              transition-all duration-300"
             >
-              <h3 className="text-2xl md:text-3xl font-semibold text-yellow-400 mb-4">
-                {project.title}
-              </h3>
 
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-                {project.description}
-              </p>
+              {/* Top Content */}
+              <div>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-400 mb-4">
+                  {project.title}
+                </h3>
 
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-8">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex gap-3">
+
                 <a
                   href={project.liveUrl}
-                  className="bg-yellow-400 text-black px-5 py-2.5 rounded-lg font-semibold
-                             transition-all duration-300 ease-in-out text-center
-                             hover:bg-yellow-500 hover:shadow-lg hover:scale-105"
+                  className="flex-1 text-center
+                  bg-yellow-400 text-black
+                  px-4 py-2
+                  rounded-3xl font-semibold
+                  text-sm md:text-sm lg:text-base
+                  transition hover:bg-yellow-500"
                 >
                   {project.liveLabel}
                 </a>
@@ -75,17 +89,23 @@ function Projects() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="border-2 border-yellow-400 text-yellow-400 px-5 py-2.5 rounded-lg font-semibold
-                             transition-all duration-300 ease-in-out text-center
-                             hover:bg-yellow-400 hover:text-black hover:shadow-lg hover:scale-105"
+                  className="flex-1 text-center
+                  border-2 border-yellow-400 text-yellow-400
+                  px-4 py-2
+                  rounded-3xl font-semibold
+                  text-sm md:text-sm lg:text-base
+                  transition hover:bg-yellow-400 hover:text-black"
                 >
                   GitHub
                 </a>
-              </div>
-            </div>
-          ))}
-        </div>
 
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
       </div>
     </section>
   );
